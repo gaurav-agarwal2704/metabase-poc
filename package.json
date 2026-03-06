@@ -1,0 +1,9 @@
+{
+  "name": "metabase-poc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ../server && yarn install",
+    "start": "cd server && node_modules/.bin/tsx index.ts"
+  }
+}
