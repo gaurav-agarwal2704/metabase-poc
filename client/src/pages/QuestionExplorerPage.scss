@@ -1,0 +1,73 @@
+@use '../styles/variables' as *;
+
+.explorer-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-page__header {
+  padding: $header-padding;
+  border-bottom: $border-light;
+
+  h1 {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  p {
+    margin-top: 4px;
+    font-size: $font-size-base;
+    color: $text-secondary;
+  }
+}
+
+.explorer-page__controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.explorer-page__input {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: $font-size-base;
+  width: 140px;
+}
+
+.explorer-page__btn {
+  padding: 6px 16px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: $font-size-base;
+  cursor: pointer;
+
+  &--load {
+    background-color: $brand;
+
+    &:hover {
+      background-color: $brand-hover;
+    }
+  }
+
+  &--new {
+    background-color: $success;
+
+    &:hover {
+      background-color: darken($success, 8%);
+    }
+  }
+}
+
+.explorer-page__content {
+  flex: 1;
+  min-height: 0;
+}
+
+.explorer-page__embed {
+  height: 100%;
+  min-height: auto;
+}

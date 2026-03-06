@@ -1,0 +1,41 @@
+// OT4R shared design tokens for SCSS
+// These mirror the values in config/theme.ts for CSS usage
+
+// Colors
+$brand: #1a73e8;
+$brand-hover: #1557b0;
+$success: #059669;
+
+$text-primary: #1f2937;
+$text-secondary: #6b7280;
+$text-tertiary: #9ca3af;
+
+$bg-page: #f9fafb;
+$bg-white: #ffffff;
+$bg-sidebar: #1f2937;
+$bg-sidebar-active: #374151;
+
+$border-color: #e5e7eb;
+$border-sidebar: #374151;
+
+$link-active: #60a5fa;
+$link-default: #d1d5db;
+
+// Spacing
+$header-padding: 16px 24px;
+$sidebar-width: 240px;
+
+// Typography
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-base: 13px;
+$font-size-md: 14px;
+$font-size-lg: 20px;
+
+// Borders
+$border-light: 1px solid $border-color;
+$border-sidebar-divider: 1px solid $border-sidebar;
+
+// Transitions
+$transition-fast: all 0.15s ease;
+$transition-bg: background-color 0.3s ease;
