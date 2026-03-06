@@ -40,10 +40,10 @@ app.post("/api/metabase/auth", (_req, res) => {
   res.json(token);
 });
 
-app.use(express.static(path.resolve(__dirname, "../client/dist")));
+app.use(express.static(path.resolve(__dirname, "../../client/dist")));
 
 app.get("*", (_req, res) => {
-  const indexPath = path.resolve(__dirname, "../client/dist/index.html");
+  const indexPath = path.resolve(__dirname, "../../client/dist/index.html");
   res.sendFile(indexPath);
 });
 
