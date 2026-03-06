@@ -1,17 +1,17 @@
 services:
   - type: web
     name: metabase-poc
-    runtime: static
-    buildCommand: cd client && yarn install && yarn build
-    staticPublishPath: client/dist
+    runtime: node
+    buildCommand: cd client && yarn install && yarn build && cd ../server && yarn install
+    startCommand: cd server && node_modules/.bin/tsx index.ts
     envVars:
       - key: VITE_AUTH_MODE
         value: jwt
       - key: VITE_METABASE_INSTANCE_URL
         sync: false
+      - key: METABASE_JWT_SECRET
+        sync: false
       - key: VITE_DASHBOARD_ID
         value: "1"
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+      - key: NODE_VERSION
+        value: "20"
