@@ -20,7 +20,7 @@ app.use(express.json());
  * In production, replace the hardcoded user with your app's session/auth logic.
  * Metabase JWT docs: https://www.metabase.com/docs/latest/people-and-groups/authenticating-with-jwt
  */
-app.post("/api/metabase/auth", (_req, res) => {
+app.all("/api/metabase/auth", (_req, res) => {
   if (!JWT_SECRET) {
     res.status(500).json({ error: "METABASE_JWT_SECRET not configured" });
     return;
@@ -37,7 +37,7 @@ app.post("/api/metabase/auth", (_req, res) => {
     JWT_SECRET,
   );
 
-  res.json(token);
+  res.json({ jwt: token });
 });
 
 app.use(express.static(path.resolve(__dirname, "../../client/dist")));
