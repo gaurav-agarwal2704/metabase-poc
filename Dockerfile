@@ -13,4 +13,4 @@ RUN cd server && yarn install
 COPY server/ ./server/
 
 EXPOSE 4200
-CMD ["node", "--import", "tsx/esm", "server/index.ts"]
+CMD ["sh", "-c", "cd /app/server && node_modules/.bin/tsx index.ts"]
